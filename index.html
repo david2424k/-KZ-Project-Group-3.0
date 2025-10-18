@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KZ Project Group - Проектирование зданий</title>
+
+    <!-- Tailwind CDN (работает на GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-16">
+            <div>
+                <div class="inline-block mb-2 px-4 py-1 rounded-full border border-indigo-500 bg-indigo-500 bg-opacity-10">
+                    <span class="text-indigo-400 font-semibold text-sm tracking-wider">🏗️ ПРОФЕССИОНАЛЬНОЕ ПРОЕКТИРОВАНИЕ</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black mb-1">
+                    <span class="gradient-text">KZ Project Group</span>
+                </h1>
+                <p class="text-base md:text-xl text-gray-300 font-light">Проектирование зданий и сооружений</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button id="adminBtn" class="px-4 py-2 rounded-xl text-sm border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 hidden">Админ</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="card p-2 mb-8">
+            <div class="flex gap-2">
+                <button onclick="showPage('home')" id="nav-home" class="nav-btn active flex-1 py-3 px-4 text-gray-300 font-semibold">Главная</button>
+                <button onclick="showPage('projects')" id="nav-projects" class="nav-btn flex-1 py-3 px-4 text-gray-300 font-semibold">Проекты</button>
+                <button onclick="showPage('ai')" id="nav-ai" class="nav-btn flex-1 py-3 px-4 text-gray-300 font-semibold">AI Ассистент</button>
+                <button onclick="showPage('contacts')" id="nav-contacts" class="nav-btn flex-1 py-3 px-4 text-gray-300 font-semibold">Контакты</button>
+            </div>
+        </div>
+
+        <!-- Pages -->
+        <main>
+            <!-- Home -->
+            <section id="page-home" class="card-light p-8 md:p-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">Профессиональное <span class="gradient-text">проектирование</span> зданий</h2>
+                    <p class="text-base md:text-xl text-gray-600 leading-relaxed mb-8 font-light">
+                        ТОО «KZ Project Group» специализируется на комплексном проектировании зданий и сооружений.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="p-6 rounded-2xl border-2 border-indigo-100 hover:border-indigo-300 transition-all">
+                            <div class="text-3xl mb-3">🏢</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Архитектурные решения</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Проектирование жилых, коммерческих и промышленных зданий с современным дизайном.</p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl border-2 border-purple-100 hover:border-purple-300 transition-all">
+                            <div class="text-3xl mb-3">⚡</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Инженерные системы</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Проектирование электроснабжения, вентиляции, водоснабжения и отопления.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="showPage('projects')" class="btn-primary px-8 py-3 text-white font-bold rounded-2xl">Смотреть проекты</button>
+                        <button onclick="showPage('ai')" class="ml-3 px-8 py-3 bg-white text-indigo-600 border-2 border-indigo-200 font-bold rounded-2xl">AI Ассистент</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="page-projects" class="card-light p-8 md:p-16 hidden">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-4">Наши проекты</h2>
+                    <p class="text-gray-600 text-sm md:text-lg mb-8 font-light">Портфолио реализованных архитектурных решений</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Project card template: используйте реальные изображения в папке images/ -->
+                        <div class="project-card rounded-2xl overflow-hidden border-2 border-gray-200">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">Изображение</div>
+                            <div class="p-4 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">Бизнес-центр "Almaty Tower"</h3>
+                                <p class="text-gray-600 mb-2 text-sm">Современное коммерческое здание с системами умного управления</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">Коммерческое</span>
+                                    <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">15 этажей</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card rounded-2xl overflow-hidden border-2 border-gray-200">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">Изображение</div>
+                            <div class="p-4 bg-white">
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">ЖК "Comfort City"</h3>
+                                <p class="text-gray-600 mb-2 text-sm">Комфортабельный жилой комплекс с развитой инфраструктурой</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Жилое</span>
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">250 квартир</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button onclick="showPage('contacts')" class="btn-primary px-8 py-3 text-white font-bold rounded-2xl">Заказать проект</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Assistant -->
+            <section id="page-ai" class="card-light p-8 md:p-16 hidden">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-4">AI Ассистент</h2>
+                    <p class="text-gray-600 text-sm md:text-lg mb-6 font-light">Задайте вопрос о проектировании, услугах или нашей компании</p>
+
+                    <div class="bg-gray-50 rounded-2xl p-4 md:p-6 chat-container mb-4" id="chatContainer">
+                        <div class="message">
+                            <div class="flex gap-3 items-start">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-xl">🤖</span>
+                                </div>
+                                <div class="bg-white p-3 rounded-2xl shadow-sm flex-1">
+                                    <p class="text-gray-800">Здравствуйте! Я AI-ассистент KZ Project Group. Могу ответить на вопросы о нашей компании, услугах проектирования и помочь с консультацией. Чем могу помочь?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <input type="text" id="userQuestion" placeholder="Введите ваш вопрос..." class="input-field flex-1 px-4 py-2 text-sm">
+                        <button onclick="sendMessage()" class="btn-primary px-4 py-2 text-white font-bold rounded-2xl">Отправить</button>
+                    </div>
+
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <button onclick="askPredefined('Какие услуги вы предоставляете?')" class="p-3 border-2 border-indigo-100 rounded-xl text-left">Какие услуги вы предоставляете?</button>
+                        <button onclick="askPredefined('Сколько стоит проект жилого дома?')" class="p-3 border-2 border-purple-100 rounded-xl text-left">Сколько стоит проект жилого дома?</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacts -->
+            <section id="page-contacts" class="card-light p-8 md:p-16 hidden">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-4">Контакты</h2>
+                    <p class="text-gray-600 text-sm md:text-lg mb-6 font-light">Свяжитесь с нами для консультации или заказа проекта</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl">
+                            <div class="text-2xl mb-2">📍</div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Адрес</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">Казахстан, Алматинская область, Талгарский район, город Талгар, улица Қазанғап, дом 4А, кв. 17, 041600</p>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
+                            <div class="text-2xl mb-2">📞</div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Телефон / WhatsApp</h3>
+                            <p class="text-gray-700 text-lg font-semibold">+7-708-888-00-98</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border-2 border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Форма обратной связи</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-1">Ваше имя *</label>
+                                    <input type="text" id="contactName" required class="input-field w-full px-3 py-2">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-bold mb-1">Телефон *</label>
+                                    <input type="tel" id="contactPhone" required class="input-field w-full px-3 py-2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-1">Email *</label>
+                                <input type="email" id="contactEmail" required class="input-field w-full px-3 py-2">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-1">Тип проекта *</label>
+                                <select id="contactType" required class="input-field w-full px-3 py-2">
+                                    <option value="">Выберите тип</option>
+                                    <option value="Жилое здание">Жилое здание</option>
+                                    <option value="Коммерческое здание">Коммерческое здание</option>
+                                    <option value="Промышленное здание">Промышленное здание</option>
+                                    <option value="Реконструкция">Реконструкция</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-bold mb-1">Сообщение *</label>
+                                <textarea id="contactMessage" required class="input-field w-full px-3 py-2 h-24"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full py-3 text-white font-bold rounded-2xl">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Page (hidden) -->
+            <section id="page-admin" class="card-light p-8 md:p-16 hidden">
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl md:text-4xl font-black text-gray-900">Админ-панель</h2>
+                        <div class="flex gap-2">
+                            <button onclick="loadAdminData()" class="px-3 py-2 bg-blue-500 text-white rounded-xl">↻ Обновить</button>
+                            <button onclick="clearAllData()" class="px-3 py-2 bg-orange-500 text-white rounded-xl">Очистить данные</button>
+                            <button onclick="logoutAdmin()" class="px-3 py-2 bg-red-500 text-white rounded-xl">Выйти</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="p-4 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl text-center">
+                            <div class="text-3xl font-black gradient-text mb-1" id="totalRequests">0</div>
+                            <p class="text-gray-600 font-semibold text-sm">Всего заявок</p>
+                        </div>
+                        <div class="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl text-center">
+                            <div class="text-3xl font-black text-green-600 mb-1" id="aiQuestions">0</div>
+                            <p class="text-gray-600 font-semibold text-sm">Вопросов AI</p>
+                        </div>
+                        <div class="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl text-center">
+                            <div class="text-3xl font-black text-blue-600 mb-1" id="projectViews">0</div>
+                            <p class="text-gray-600 font-semibold text-sm">Просмотров проектов</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 border-2 border-gray-200 mb-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Заявки клиентов</h3>
+                        <div id="adminData" class="space-y-4"></div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 border-2 border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Вопросы AI Ассистенту</h3>
+                        <div id="aiQuestionsData" class="space-y-4"></div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 border-2 border-gray-200 mt-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Редактирование текста</h3>
+                        <div class="space-y-3">
+                            <label class="block text-sm text-gray-600">Блок "О компании"</label>
+                            <textarea id="editAbout" class="input-field w-full px-3 py-2 h-24"></textarea>
+
+                            <label class="block text-sm text-gray-600">Блок "Услуги"</label>
+                            <textarea id="editServices" class="input-field w-full px-3 py-2 h-24"></textarea>
+
+                            <div class="flex gap-2 mt-2">
+                                <button onclick="saveEdits()" class="px-3 py-2 bg-green-500 text-white rounded-xl">Сохранить</button>
+                                <button onclick="loadEdits()" class="px-3 py-2 bg-gray-200 rounded-xl">Отмена</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Admin login modal -->
+    <div id="adminLoginModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="card-light p-6 max-w-sm w-full mx-4">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Вход в админ-панель</h3>
+            <input type="password" id="adminPassword" placeholder="Введите пароль" class="input-field w-full px-3 py-2 mb-3">
+            <div class="flex gap-2">
+                <button onclick="checkAdminPassword()" class="btn-primary flex-1 py-2 text-white rounded-xl">Войти</button>
+                <button onclick="closeAdminLogin()" class="flex-1 py-2 bg-gray-200 text-gray-700 rounded-xl">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small admin button at bottom right -->
+    <button id="adminBtnBottom" title="Вход в админку" class="admin-bottom fixed bottom-4 right-4 p-2 rounded-full opacity-80 z-40 text-sm">адм</button>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

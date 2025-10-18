@@ -1,0 +1,27 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #fef3c7, #f59e0b);
+  color: #111;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: #92400e;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+main {
+  padding: 40px 20px;
+  font-size: 1.2rem;
+}
+
+footer {
+  background: #111827;
+  color: #eee;
+  padding: 10px;
+  font-size: 0.9rem;
+}
